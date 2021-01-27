@@ -4,10 +4,23 @@ app = Flask(__name__)
 # print(app)
 
 @app.route('/')
-def hello_world():
+def my_home():
     return render_template('index.html')
 
+@app.route('/works')
+def works():
+    return render_template('works.html')
 
-@app.route('/blog')
-def bb():
-    return 'blog2'
+@app.route('/about.html')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact.html')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/components.html')
+def components():
+    return render_template('components.html')
+
+
